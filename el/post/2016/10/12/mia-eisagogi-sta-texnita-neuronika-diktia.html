@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="el" class="h-100" xmlns='http://www.w3.org/1999/xhtml'
+xmlns:og='http://ogp.me/ns#'><head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Facebook meta -->
+<meta property="og:site_name" content="JP Legacy"/>
+<meta property="og:type" content="article" />  <!-- https://developers.facebook.com/docs/reference/opengraph#object-type -->
+
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="el_GR" />
+<meta name="twitter:site" content="@johnprantalos" />
+<meta name="twitter:creator" content="@johnprantalos" />
+<meta name="twitter:card" content="summary" />
+
+
+
+	
+		<title>Μια εισαγωγή στα Τεχνητά Νευρωνικά Δίκτυα | JP Legacy</title>
+		<meta property="og:title" content="Μια εισαγωγή στα Τεχνητά Νευρωνικά Δίκτυα | JP Legacy" />
+		<meta property="twitter:title" content="Μια εισαγωγή στα Τεχνητά Νευρωνικά Δίκτυα | JP Legacy" />
+	
+
+
+
+
+
+	<meta name="description" content="Μια σύντομη εισαγωγή στον κόσμο των Τεχνητών Νευρωνικών Δικτύων και της
+Τεχνητής Νοημοσύνης και μια σύγκριση αυτών με την λειτουργία του εγκεφάλου μας.
+" />
+	<meta property="og:description" content="Μια σύντομη εισαγωγή στον κόσμο των Τεχνητών Νευρωνικών Δικτύων και της
+Τεχνητής Νοημοσύνης και μια σύγκριση αυτών με την λειτουργία του εγκεφάλου μας.
+" />
+
+
+
+
+	<meta property="og:url" content="https://legacy.prantalos.com/el/post/2016/10/12/mia-eisagogi-sta-texnita-neuronika-diktia.html" />
+
+
+
+
+	<meta property="article:published_time" content="2016-10-12T01:00:00+03:00">
+
+
+
+
+
+
+	<meta property="og:image" content="https://i.imgur.com/16Gyjf6.jpg" />
+
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script><link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://legacy.prantalos.com/feed.xml" title="JP Legacy" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="h-100 text-dark bg-dark">
+	<div class="container-fluid h-100">
+		<div class="container-xxl h-100">
+			<div class="row">
+				<main class="col px-lg-5"><div class="d-flex flex-column bg-gradient-papaya">
+	<div class="d-flex flex-column flex-md-row flex-row px-1 px-sm-5 text-center text-md-start ">
+		<a class="text-decoration-none text-dark" href="https://legacy.prantalos.com/el">
+			<div class="d-flex justify-content-center flex-row flex-md-column py-3">
+				<img height="128" src="https://i.imgur.com/ZRnQl61.png" alt="john.prantalos" />
+			</div>
+		</a>
+		<div class="p-0 p-sm-3 flex-fill">
+			<a href="https://legacy.prantalos.com/el" class="text-decoration-none text-dark">
+				<h1 class="text-center text-lg-start">JP Legacy</h1>
+				<h6 class="text-center text-lg-start">Αναρτήσεις για εμπειρίες, απόψεις, προγραμματιστικά θέματα και που και που gaming και VR.</h6>
+			</a>
+			<div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="text-center text-lg-start">
+        <a
+            class="btn btn-outline-dark btn-floating m-1"href="/el/feed.xml"
+            
+            role="button"
+            title="Subscribe via RSS"
+        >
+            <i class="fas fa-rss"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://twitter.com/johnprantalos"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.linkedin.com/in/johnprantalos/"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://github.com/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.behance.net/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-behance"></i>
+        </a>
+    </div>
+    <div class="d-flex flex-row justify-content-center my-2 my-lg-0">
+        <!-- <div><script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+<script type='text/javascript'>
+	kofiwidget2.init('Κέρνα ένα Κό-φι', '#29abe0', 'T6T33YC8F');
+	kofiwidget2.draw();
+</script> </div> -->
+        <div><div class="btn-group ms-3 d-block">
+	<button type="button" class="btn btn-light dropdown-toggle pe-4" data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="/assets/el.svg">
+	</button>
+	<ul class="dropdown-menu"><li>
+				<a class="dropdown-item " href="https://legacy.prantalos.com/">
+					<!-- English -->
+					English
+				</a>
+			</li><li>
+				<a class="dropdown-item bg-primary text-light" href="https://legacy.prantalos.com/el">
+					<!-- Ελληνικά -->
+					Ελληνικά
+				</a>
+			</li></ul>
+</div></div>
+    </div>
+</div>
+		</div>
+	</div>
+	<div class=""><nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container flex-column flex-lg-row">
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span> <span>Μενού</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item">
+					<a 
+						class="nav-link"
+						href="https://legacy.prantalos.com/el"
+						title="Αρχική"
+					>
+						<i class="fas fa-home d-none d-lg-inline-block"></i>
+						<span class="d-lg-none">Αρχική</span>
+					</a>
+				</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/σχετικά/"
+							>
+								Σχετικά
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li></ul>
+		</div>
+	</div>
+</nav>
+</div>
+</div>
+	<div class="bg-white"><div class="row">
+	<div class="col">
+		<article class="card text-dark bg-light border-0" itemscope itemtype="http://schema.org/BlogPosting">
+			
+				<img src="https://i.imgur.com/16Gyjf6.jpg" class="card-img-top rounded-0" alt="Post Thumb">
+			
+			<div class="card-body blog-body px-5 ">
+				<h6 class="card-subtitle mb-2 text-muted" itemprop="datePublished">
+					Δημοσιεύτηκε στις
+					12/10/2016
+					
+					<small class="ms-1">
+							Ενημερώθηκε στις
+							19/03/2021
+						</small>
+					
+				</h6>
+				<h1 class="card-title" itemprop="name headline">
+					Μια εισαγωγή στα Τεχνητά Νευρωνικά Δίκτυα
+				</h1>
+				<p class="card-text" itemprop="articleBody">
+					<p>Μια σύντομη εισαγωγή στον κόσμο των Τεχνητών Νευρωνικών Δικτύων και της
+Τεχνητής Νοημοσύνης και μια σύγκριση αυτών με την λειτουργία του εγκεφάλου μας.</p>
+
+<h1 id="πως-λειτουργεί-ο-εγκέφαλός-μας">Πως λειτουργεί ο εγκέφαλός μας</h1>
+
+<p>Αναμφίβολα ο εγκέφαλος είναι το πιο μυστήριο όργανο του σώματός μας και αυτό
+που έχουμε δυσκολευτεί περισσότερο να αποκρυπτογραφήσουμε. Παρακάτω, θα δούμε
+ένα μέρος της λειτουργίας του: το νευρωνικό του δίκτυο.</p>
+
+<h2 id="ο-νευρώνας">Ο Νευρώνας</h2>
+
+<figure class="figure w-100">
+		<img src="https://i.imgur.com/KJ8uEdN.jpg" class="figure-img img-fluid rounded d-block mx-auto" alt="Imgur ID KJ8uEdN" />
+		
+			<figcaption class="figure-caption text-center">
+				Μια συνοπτική απεικόνιση ενός εγκεφαλικού νευρώνα
+			</figcaption>
+		
+	</figure>
+
+<p>Πριν δούμε το δίκτυο όμως, θα πρέπει να δούμε τα μέρη από τα οποία αποτελείται:
+τους νευρώνες. Πάνω μπορείς να δείς έναν από τους περίπου 10.000.000.000
+νευρώνες που έχει ο εγκέφαλός μας. Τι είναι το κάθε μέρος αφορά τους βιολόγους,
+οπότε εδώ δεν θα μπω σε λεπτομέρειες.</p>
+
+<h2 id="επικοινωνία-μεταξύ-των-νευρώνων">Επικοινωνία μεταξύ των νευρώνων</h2>
+
+<p>Να σημειώσω ότι υπάρχει ολόκληρη επιστήμη πάνω στα βιολογικά νευρωνικά δίκτυα,
+την οποία προφανώς δεν κατέχω παρά ελάχιστα, όσο απαιτεί η ενασχόλησή μου με τα
+τεχνητά νευρωνικά δίκτυα. Παρακάτω προσπαθώ να επεξηγήσω πως λειτουργεί το
+βιολογικό νευρωνικό δίκτυο όσο πιο απλά γίνεται.</p>
+
+<p>Κάθε νευρώνας συνδέεται με χιλιάδες άλλους νευρώνες και ανταλλάσει μηνύματα με
+αυτούς μέσω διαφόρων ισχύων συνάψεων. Όσο πιο πολλά μαθαίνουμε οι συνάψεις των
+συγκεκριμένων νευρώνων που συμμετείχαν στην εκμάθηση ενισχύονται.</p>
+
+<p>Ένας νευρώνας έχει δύο καταστάσεις. Μία κατά την οποία στέλνει έναν παλμό
+αρκετών Hz, και μία που δεν στέλνει σήμα.</p>
+
+<p>Κάθε νευρώνας έχει αρκετές συνάψεις διαφορετικής ισχύος (βάρη) ως εισόδους και
+μία έξοδο που εξαρτάται από τις εισόδους.</p>
+
+<h2 id="η-δύναμη-της-συλλογικότητας">Η δύναμη της συλλογικότητας</h2>
+
+<figure class="figure w-100">
+		<img src="https://i.imgur.com/16Gyjf6.jpg" class="figure-img img-fluid rounded d-block mx-auto" alt="Imgur ID 16Gyjf6" />
+		
+			<figcaption class="figure-caption text-center">
+				Καλλιτεχνική αναπαράσταση ενός νευρωνικού δικτύου
+			</figcaption>
+		
+	</figure>
+
+<p>Ένας νευρώνας είναι μια πολύ μικρή υπολογιστική μονάδα, τόσο σε μέγεθος όσο και
+σε ικανότητα υπολογισμών.</p>
+
+<p>Ωστόσο λόγω του πλήθους των νευρώνων, ο εγκέφαλος είναι σε θέση να κάνει
+πολύπλοκες εργασίες αφού μπορεί να τις «σπάει» ώστε να επεξεργαστούν από
+μεμονομένους νευρώνες.</p>
+
+<p>Ενώ τα τεχνητά νευρωνικά δίκτυα που θα δούμε παρακάτω σε ταχύτητα μετάδοσης
+είναι γρηγορότερα από τις συνδέσεις του βιολογικού νευρωνικού δικτύου, η
+τεχνολογία του σήμερα αδυνατεί να πλησιάσει την παραλληλία με την οποία ο
+εγκέφαλος διαχειρίζεται τις πληροφορίες.</p>
+
+<p>Παρόλαυτά με πολύ απλούστερα μοντέλα νευρωνικών δικτύων από αυτά του εγκεφάλου,
+έχουμε κατορθώσει να έχουμε πολύ ενδιαφέροντα αποτελέσματα και όσο η τεχνολογία
+προοδεύει τόσο θα αυξάνει η ευφυΐα των μοντέλων αυτών.</p>
+
+<h1 id="γιατί-τεχνητά-νευρωνικά-δίκτυα-και-όχι-απλός-προγραμματισμός">Γιατί Τεχνητά Νευρωνικά Δίκτυα και όχι απλός προγραμματισμός;</h1>
+
+<p>Με τον όρο απλό προγραμματισμό αναφέρομαι στον προστακτικό προγραμματισμό 
+(imperative programming) στον οποίο ανοίκουν οι κλασσικές γλώσσες όπως C, C++,
+Java κ.ά. και τον δηλωτικό προγραμματισμό (declarative programming) στον οποίο
+ανοίκουν οι SQL, HTML, CSS κ.ά.</p>
+
+<figure class="figure w-100">
+		<img src="https://i.imgur.com/zEE4Fri.jpg" class="figure-img img-fluid rounded d-block mx-auto" alt="Imgur ID zEE4Fri" />
+		
+	</figure>
+
+<p>Τα τεχνητά νευρωνικά δίκτυα ανοίκουν στην οικογένεια του συναρτησιακού
+προγραμματισμού (functional programming).</p>
+
+<p>Τις διαφορές μεταξύ των ειδών προγραμματισμού μπορείς να τις βρείς και να τις
+κατανοήσεις, δεν θεωρώ ότι είναι κάτι που πρέπει να αναλυθεί εδώ.</p>
+
+<p>Αλλά γιατί είναι τόσο ελκυστικά τα Τεχνητά Νευρωνικά Δίκτυα (από εδώ και στο
+εξής θα τα λέω ΤΝΔ);</p>
+
+<h2 id="εξάλειψη-του-αλγοριθμικού-μοντέλου">Εξάλειψη του αλγοριθμικού μοντέλου</h2>
+
+<p>Με τον απλό προγραμματισμό (περιέγραψα παραπάνω τι εννοώ με αυτό τον όρο) για
+να επιλύσουμε ένα πρόβλημα ακολουθούμε έναν αλγόριθμο ο οποίος επιλύει το
+συγκεκριμένο πρόβλημα. Μπορούμε να αλλάξουμε τις μεταβλητές εισόδου και να
+έχουμε άλλη έξοδο αλλά η λύση είναι η ίδια.</p>
+
+<p>Πρακτικά αυτό σημαίνει ότι με τον απλό προγραμματισμό επιλύουμε προβλήματα που
+ήδη ξέρουμε πως να επιλύσουμε και απλά εκμεταλλευόμαστε την ταχύτητα των
+υπολογιστικών συστημάτων για να τα επιλύσουμε ταχύτερα.</p>
+
+<p>Τι θα γινόταν όμως αν τα υπολογιστικά συστήματα μπορούσαν από μόνα τους να 
+επιλύσουν προβλήματα που πολύ πιθανόν ούτε εμείς δεν θα ξέραμε πως;</p>
+
+<h2 id="δεν-προγραμματίζονται-να-κάνουν-κάποια-εργασία-αλλά-εκπαιδεύονται-γιαυτή">Δεν προγραμματίζονται να κάνουν κάποια εργασία, αλλά εκπαιδεύονται γι’αυτή.</h2>
+
+<p>Δεν προγραμματίζεις εκ των προτέρων ένα ΤΝΔ να κάνει μια συγκεκριμένη εργασία,
+αλλά βάσει των δειγμάτων που του εισάγεις το εκπαιδεύεις να την κάνει.</p>
+
+<p>Για τον λόγο αυτό η εκπαίδευση ενός ΤΝΔ είναι ιδιαίτερα λεπτός τομέας καθώς αμα
+του εισάγεις λάθος δείγματα πολλές φορές είναι δύσκολο να βρείς τα λάθη στους
+υπολογισμούς.</p>
+
+<h2 id="αναγνώριση-μοτίβων-pattern-recognition">Αναγνώριση Μοτίβων (Pattern Recognition)</h2>
+
+<figure class="figure w-100">
+		<img src="https://i.imgur.com/Ngjs8xp.jpg" class="figure-img img-fluid rounded d-block mx-auto" alt="Imgur ID Ngjs8xp" />
+		
+	</figure>
+
+<p>Το δυνατό σημείο των ΤΝΔ είναι η δυνατότητα αναγνώρισης μοτίβων.</p>
+
+<p>Δεν είναι τυχαίο ότι τα περισσότερα, αν όχι όλα προγράμματα αναγνώρισης φωνής
+(speech recognition), μετάφρασης, και αναγνώρισης εικόνων είναι εκπαιδευμένα
+ΤΝΔ.
+Βέβαια θα μπορούσαμε να φτιάξουμε τα παραπάνω προγράμματα και με τον απλό
+προγραμματισμό αλλά θα ήταν εξαιρετικά χρονοβόρο και ενεργοβόρο.</p>
+
+<h3 id="ανοχή-στα-λάθη">Ανοχή στα λάθη</h3>
+
+<p>Αν για κάποιο λόγο καταρρεύσει μέρος του ΤΝΔ, ναι μεν θα πέσει η απόδοση του
+ΤΝΔ, αλλά θα μπορέσει να προσαρμοστεί στο λάθος.</p>
+
+<h3 id="αυτό-οργάνωση">Αυτό-οργάνωση</h3>
+
+<p>Τα ΤΝΔ μπορούν να οργανώνουν και να παρουσιάζουν την εισαγώμενη πληροφορία κατά
+την εκπαίδευσή τους.</p>
+
+<h3 id="παραλληλία-υπολογισμών">Παραλληλία υπολογισμών</h3>
+<p>Ένα ΤΝΔ μπορεί να χρησιμοποιεί ταυτόχρονα νευρώνες αν του το επιτρέπει ο 
+σχεδιασμός και το hardware του, με αποτέλεσμα οι υπολογισμοί να επιταχύνονται.</p>
+
+<h1 id="τι-δεν-είναι-τα-τνδ">Τι ΔΕΝ είναι τα ΤΝΔ</h1>
+
+<h2 id="δεν-λύνουν-τα-πάντα">Δεν λύνουν τα πάντα</h2>
+
+<p>Τα ΤΝΔ λύνουν συγκεκριμένο αριθμό προβλημάτων, κυρίως Ασαφούς Λογικής τα οποία
+ο απλός προγραμματισμός, αδυνατεί ή δυσκολεύεται να επιλύσει.</p>
+
+<h2 id="δεν-λειτουργούν-όπως-ο-εγκέφαλος">Δεν λειτουργούν όπως ο εγκέφαλος</h2>
+
+<p>Σίγουρα είναι ωραίο να λες ότι ασχολείσαι με ΤΝΔ τα οποία σκέφτονται όπως ο
+εγκέφαλος. Σε κάνει τον φοβερό επιστήμονα της οικογένειας ή της παρέας αλλά όσο
+εντυπωσιακά και αν είναι τα ΤΝΔ δεν πλησιάζουν την πολυπλοκότητα και
+αποτελεσματικότητα του εγκεφάλου ούτε στο ελάχιστο.</p>
+
+<p>Παραμένει εντυπωσιακό το ότι με πολύ εξαπλουστευμένα μοντέλα έχουμε τόσο ακριβή
+αποτελέσματα, αλλά αυτό συμβαίνει σε συγκεκριμένα προβλήματα και υπό
+συγκεκριμένες προϋποθέσεις.</p>
+
+<h1 id="πηγές">Πηγές</h1>
+
+<ul>
+  <li>
+    <p><a href="http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/ds12/article1.html">Dimitrios Siganos. Why Neural Networks.</a></p>
+  </li>
+  <li>
+    <p><a href="http://el.wikipedia.org/wiki/%CE%9D%CE%B5%CF%85%CF%81%CF%89%CE%BD%CE%B9%CE%BA%CF%8C_%CE%B4%CE%AF%CE%BA%CF%84%CF%85%CE%BF">Βικιπαίδεια. Νευρωνικό Δίκτυο</a></p>
+  </li>
+</ul>
+
+				</p>
+			</div>
+			<a class="u-url" href="/el/post/2016/10/12/mia-eisagogi-sta-texnita-neuronika-diktia.html" hidden></a>
+		</article>
+	</div>
+</div></div><footer class="bg-gradient-papaya text-center text-dark p-3">
+<!--
+	<section class="">
+		<form action="">
+			<div class="row d-flex justify-content-center">
+				<div class="col-auto">
+					<p class="pt-2">
+						<strong>Sign up for our newsletter</strong>
+					</p>
+				</div>
+				<div class="col-md-5 col-12">
+					<div class="form-outline form-white mb-4">
+						<input type="email" id="form5Example2" class="form-control" />
+						<label class="form-label" for="form5Example2">Email address</label>
+					</div>
+				</div>
+				<div class="col-auto">
+					<button type="submit" class="btn btn-outline-light mb-4">
+						Subscribe
+					</button>
+				</div>
+			</div>
+		</form>
+	</section>
+-->
+	
+<!--
+	<section class="">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+-->
+	<div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="text-center text-lg-start">
+        <a
+            class="btn btn-outline-dark btn-floating m-1"href="/el/feed.xml"
+            
+            role="button"
+            title="Subscribe via RSS"
+        >
+            <i class="fas fa-rss"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://twitter.com/johnprantalos"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.linkedin.com/in/johnprantalos/"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://github.com/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.behance.net/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-behance"></i>
+        </a>
+    </div>
+    <div class="d-flex flex-row justify-content-center my-2 my-lg-0">
+        <!-- <div><script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+<script type='text/javascript'>
+	kofiwidget2.init('Κέρνα ένα Κό-φι', '#29abe0', 'T6T33YC8F');
+	kofiwidget2.draw();
+</script> </div> -->
+        <div><div class="btn-group ms-3 d-block">
+	<button type="button" class="btn btn-light dropdown-toggle pe-4" data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="/assets/el.svg">
+	</button>
+	<ul class="dropdown-menu"><li>
+				<a class="dropdown-item " href="https://legacy.prantalos.com/">
+					<!-- English -->
+					English
+				</a>
+			</li><li>
+				<a class="dropdown-item bg-primary text-light" href="https://legacy.prantalos.com/el">
+					<!-- Ελληνικά -->
+					Ελληνικά
+				</a>
+			</li></ul>
+</div></div>
+    </div>
+</div>
+	<div class="text-center mt-3 px-3 pb-1">
+		&copy; 2009 - 2021 John "Pandor1an" Prantalos
+	</div>
+</footer>
+</main>
+			</div>
+		</div>
+	</div><script src='/assets/main.js'></script>
+	<script>
+		(function(d){
+		var s = d.createElement("script");
+		s.setAttribute("data-language", "el");
+		s.setAttribute("data-account", "");
+		s.setAttribute("src", "https://cdn.userway.org/widget.js");
+		(d.body || d.head).appendChild(s);})(document)
+	</script>
+</body>
+</html>

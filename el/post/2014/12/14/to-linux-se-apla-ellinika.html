@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="el" class="h-100" xmlns='http://www.w3.org/1999/xhtml'
+xmlns:og='http://ogp.me/ns#'><head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Facebook meta -->
+<meta property="og:site_name" content="JP Legacy"/>
+<meta property="og:type" content="article" />  <!-- https://developers.facebook.com/docs/reference/opengraph#object-type -->
+
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="el_GR" />
+<meta name="twitter:site" content="@johnprantalos" />
+<meta name="twitter:creator" content="@johnprantalos" />
+<meta name="twitter:card" content="summary" />
+
+
+
+	
+		<title>Το Linux σε Απλά Ελληνικά | JP Legacy</title>
+		<meta property="og:title" content="Το Linux σε Απλά Ελληνικά | JP Legacy" />
+		<meta property="twitter:title" content="Το Linux σε Απλά Ελληνικά | JP Legacy" />
+	
+
+
+
+
+
+	<meta name="description" content="Το άρθρο είναι ουσιαστικά μια διασκευή του «Μπαμπά μαμά… τι είναι το Linux;» που
+δημοσίευσα στις αρχές του μήνα. Είναι το πρώτο της σειράς «Σε απλά Ελληνικά»
+στην οποία θα προσπαθώ να μεταφράζω τον κόσμο της Πληροφορικής σε απλές έννοιες
+ώστε να γίνονται εύκολα αντιληπτές από άτομα που δεν ανήκουν στην οικογένεια των
+«πληροφορικάριων»
+" />
+	<meta property="og:description" content="Το άρθρο είναι ουσιαστικά μια διασκευή του «Μπαμπά μαμά… τι είναι το Linux;» που
+δημοσίευσα στις αρχές του μήνα. Είναι το πρώτο της σειράς «Σε απλά Ελληνικά»
+στην οποία θα προσπαθώ να μεταφράζω τον κόσμο της Πληροφορικής σε απλές έννοιες
+ώστε να γίνονται εύκολα αντιληπτές από άτομα που δεν ανήκουν στην οικογένεια των
+«πληροφορικάριων»
+" />
+
+
+
+
+	<meta property="og:url" content="https://legacy.prantalos.com/el/post/2014/12/14/to-linux-se-apla-ellinika.html" />
+
+
+
+
+	<meta property="article:published_time" content="2014-12-14T00:00:00+02:00">
+
+
+
+
+
+
+	<meta property="og:image" content="https://i.imgur.com/LFNlRJG.jpg" />
+
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script><link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://legacy.prantalos.com/feed.xml" title="JP Legacy" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="h-100 text-dark bg-dark">
+	<div class="container-fluid h-100">
+		<div class="container-xxl h-100">
+			<div class="row">
+				<main class="col px-lg-5"><div class="d-flex flex-column bg-gradient-papaya">
+	<div class="d-flex flex-column flex-md-row flex-row px-1 px-sm-5 text-center text-md-start ">
+		<a class="text-decoration-none text-dark" href="https://legacy.prantalos.com/el">
+			<div class="d-flex justify-content-center flex-row flex-md-column py-3">
+				<img height="128" src="https://i.imgur.com/ZRnQl61.png" alt="john.prantalos" />
+			</div>
+		</a>
+		<div class="p-0 p-sm-3 flex-fill">
+			<a href="https://legacy.prantalos.com/el" class="text-decoration-none text-dark">
+				<h1 class="text-center text-lg-start">JP Legacy</h1>
+				<h6 class="text-center text-lg-start">Αναρτήσεις για εμπειρίες, απόψεις, προγραμματιστικά θέματα και που και που gaming και VR.</h6>
+			</a>
+			<div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="text-center text-lg-start">
+        <a
+            class="btn btn-outline-dark btn-floating m-1"href="/el/feed.xml"
+            
+            role="button"
+            title="Subscribe via RSS"
+        >
+            <i class="fas fa-rss"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://twitter.com/johnprantalos"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.linkedin.com/in/johnprantalos/"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://github.com/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.behance.net/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-behance"></i>
+        </a>
+    </div>
+    <div class="d-flex flex-row justify-content-center my-2 my-lg-0">
+        <!-- <div><script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+<script type='text/javascript'>
+	kofiwidget2.init('Κέρνα ένα Κό-φι', '#29abe0', 'T6T33YC8F');
+	kofiwidget2.draw();
+</script> </div> -->
+        <div><div class="btn-group ms-3 d-block">
+	<button type="button" class="btn btn-light dropdown-toggle pe-4" data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="/assets/el.svg">
+	</button>
+	<ul class="dropdown-menu"><li>
+				<a class="dropdown-item " href="https://legacy.prantalos.com/">
+					<!-- English -->
+					English
+				</a>
+			</li><li>
+				<a class="dropdown-item bg-primary text-light" href="https://legacy.prantalos.com/el">
+					<!-- Ελληνικά -->
+					Ελληνικά
+				</a>
+			</li></ul>
+</div></div>
+    </div>
+</div>
+		</div>
+	</div>
+	<div class=""><nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container flex-column flex-lg-row">
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNavDropdown"
+			aria-controls="navbarNavDropdown"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span> <span>Μενού</span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item">
+					<a 
+						class="nav-link"
+						href="https://legacy.prantalos.com/el"
+						title="Αρχική"
+					>
+						<i class="fas fa-home d-none d-lg-inline-block"></i>
+						<span class="d-lg-none">Αρχική</span>
+					</a>
+				</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/σχετικά/"
+							>
+								Σχετικά
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li><li class="nav-item">
+							<a 
+								class="nav-link"
+								href="https://legacy.prantalos.com/el/index.html"
+							>
+								
+							</a>
+						</li></ul>
+		</div>
+	</div>
+</nav>
+</div>
+</div>
+	<div class="bg-white"><div class="row">
+	<div class="col">
+		<article class="card text-dark bg-light border-0" itemscope itemtype="http://schema.org/BlogPosting">
+			
+			<div class="card-body blog-body px-5 ">
+				<h6 class="card-subtitle mb-2 text-muted" itemprop="datePublished">
+					Δημοσιεύτηκε στις
+					14/12/2014
+					
+					<small class="ms-1">
+							Ενημερώθηκε στις
+							19/03/2021
+						</small>
+					
+				</h6>
+				<h1 class="card-title" itemprop="name headline">
+					Το Linux σε Απλά Ελληνικά
+				</h1>
+				<p class="card-text" itemprop="articleBody">
+					<p>Το άρθρο είναι ουσιαστικά μια διασκευή του «Μπαμπά μαμά… τι είναι το Linux;» που
+δημοσίευσα στις αρχές του μήνα. Είναι το πρώτο της σειράς «Σε απλά Ελληνικά»
+στην οποία θα προσπαθώ να μεταφράζω τον κόσμο της Πληροφορικής σε απλές έννοιες
+ώστε να γίνονται εύκολα αντιληπτές από άτομα που δεν ανήκουν στην οικογένεια των
+«πληροφορικάριων»</p>
+
+<p>Υπάρχουν 2 περιπτώσεις. Να ξέρεις από Linux και να ήρθες εδώ από περιέργεια, ή
+να μην ξέρεις από Linux και να ήρθες να μάθεις.</p>
+
+<p>Αν ανήκεις στην πρώτη κατηγορία, προσπάθησε να κρύψεις τον geekισμό σου και να
+μην με τρελάνεις στις διορθώσεις. Αυτό είναι ένα κείμενο για να μυηθεί ο μη έχων
+σχέση με Linux, οπότε αρκετές απλοποιήσεις ήταν αναγκαίες.</p>
+
+<p>Αν πάλι ανήκεις στην δεύτερη κατηγορία, καλώς ήρθες σε μια ουσιαστική παρουσίαση
+χωρίς πολύ μπλα μπλά για την μεγαλύτερη εφεύρεση μετά τον προσωπικό υπολογιστή…</p>
+
+<h1 id="το-linux">Το Linux</h1>
+
+<h2 id="ο-μπαμπάς-του-linux">Ο μπαμπάς του Linux</h2>
+
+<p>Όπως κάθε εφεύρεση έτσι και το Linux έχει τον μπαμπά του. Ήταν 1991 όταν ο
+Linus Torvalds δημοσίευσε το πρώτο Linux Kernel και άρχισε ο χορός για το πλέον
+δημοφιλές πηρύνα (kernel) λειτουργικών συστημάτων.</p>
+
+<h2 id="τι-είναι-το-linux">Τι είναι το Linux;</h2>
+
+<p>Πολύ χοντρικά (αναλύεται παρακάτω εκτενέστερα) το Linux είναι ένα λειτουργικό
+σύστημα.</p>
+
+<p>Λειτουργικό Σύστημα είναι το λογισμικό το οποίο ορίζει την επικοινωνία των
+προγραμμάτων που εγκαθιστούμε (π.χ. Firefox, Libre Office, κλπ) με το υλικό του
+υπολογιστή μας (επεξεργαστή, μνήμη κλπ).</p>
+
+<p>Άλλα λειτουργικά είναι τα Windows, Macintosh, FreeBSD, Solaris κ.α.</p>
+
+<h2 id="πόσο-δημοφιλές-είναι-το-linux">Πόσο δημοφιλές είναι το Linux;</h2>
+
+<p>Είμαι σίγουρος ότι (αν είσαι ένας μέσος Έλληνας PC χρήστης) πιστεύεις πως τα
+Windows είναι το δημοφιλέστερο λειτουργικό σύστημα.</p>
+
+<p>Αν και είσαι σωστός όσο αφορά τα desktop/laptop, στον κόσμο των servers και των
+super-computers, κυριαρχεί το Linux. Τρανή απόδειξη η παρακάτω γραφική 
+παράσταση, όπου το Linux είναι το πράσινο και όπως φαίνεται μετά το 2002
+εκτινάχθηκε η χρήση του στα Super Computers έτσι ώστε το 2013 να φτάσουμε στο
+95% των super-computers να τρέχουν κάποια έκδοση Linux.</p>
+
+<figure class="figure w-100">
+		<img src="https://i.imgur.com/SirgKWC.jpg" class="figure-img img-fluid rounded d-block mx-auto" alt="Imgur ID SirgKWC" />
+		
+	</figure>
+
+<h2 id="από-που-μπορώ-να-κατεβάσω-το-linux">Από που μπορώ να κατεβάσω το Linux;</h2>
+
+<p>Χμ… πιο σωστά θα έπρεπε να ρωτήσεις από που μπορώ να κατεβάσω μια διανομή Linux.</p>
+
+<p>Το Linux δεν είναι ένα λειτουργικό (όπως λέμε Windows για παράδειγμα), αλλά μια
+οικογένεια λειτουργικών. Το κάθε μέλος αυτής της οικογένειας είναι μια διανομή
+Linux ή αλλιώς Distro όπως συνηθίζεται να λέγονται (από την λέξη Distribution).
+Το κοινό που έχουν οι διανομές είναι ότι έχουν ως βάση το Linux Kernel.</p>
+
+<p>Για παράδειγμα όταν αγοράσεις ένα Volkswagen Polo ένα Skoda Octavia και ένα
+Seat Ibiza, και τα 3 έχουν κινητήτα από την Volkswagen, αλλά η σχεδίαση και η
+ανάπτυξή τους καθώς και τα «καλούδια» που έχει το κάθε αμάξι έγινε από
+διαφορετική «οικογένεια». Έτσι για παράδειγμα το Debian, το Ubuntu, και το
+Fedora, έχουν την ίδια μηχανή (Linux Kernel) αλλά είναι σχεδιασμένα και
+ανεπτυγμένα από διαφορετικές «οικογένειες» (Κοινότητα Debian, Ubuntu κοκ).</p>
+
+<p>Μπορείτε να δείτε ένα δένδρο με τις περισσότερες διανομές βασισμένες σε Linux
+πατώντας εδώ.</p>
+
+<p>Επομένως για να απαντήσω στην ερώτηση, για να δείς από πού μπορείς να κατεβάσεις
+τις δημοφιλέστερες διανομές linux, προτείνω να δείς αυτή την σελίδα. Αλλιώς
+μπορείς πάντα να αναζητήσεις σε μία μηχανή αναζήτησης κάποια διανομή όπως
+φάινεται στο δένδρο που ειπώθηκε πιο πάνω.</p>
+
+<p>Δεν είμαι σίγουρος ποια διανομή να διαλέξω, μπορείς να με κατευθύνεις;
+Θα μπορούσα αλλά θα προτιμούσα να το ψάξεις μόνος σου καθώς κάθε διανομή έχει
+κάτι που μπορεί να αρέσει σε κάποιον και σε κάποιον άλλο όχι.</p>
+
+<p>Αν όμως εξακολουθείς να θες μια άποψη, προσωπικά προτιμώ το Xubuntu. Ουσιαστικά
+είναι το Ubuntu, απλά αντί για το Unity γραφικό περιβάλλον έχει το πολύ
+ομορφότερο (κατά την ταπεινή μου άποψη) Xfce.</p>
+
+<p>Και επειδή είμαι σίγουρος ότι πρακτικά δεν κατάλαβες και πολλά από την παραπάνω
+επεξήγηση, σε απλά ελληνικά, αυτό σημαίνει ότι είναι ένα λειτουργικό εύκολο για
+τον αρχάριο χρήστη, με μία μεγάλη κοινότητα (και στα ελληνικά) για να βρείς
+υποστήριξη, ενώ το παραθυρικό του περιβάλλον μοιάζει πολύ με αυτό των Windows
+και είναι εύκολα παραμετροποιήσιμο.</p>
+
+<h2 id="εμ-και-από-παιχνίδια-τι-γίνεται">Εμ… και από παιχνίδια τι γίνεται;</h2>
+
+<p>Ένας από τους κυριότερους λόγους που χρήστες Windows δεν μεταπηδούν σε Linux
+είναι το γεγονός ότι δεν βρίσκουν τις εφαρμογές που έχουν στα Windows στο Linux.
+Οι Gamers είναι μια κατηγορία από αυτούς και για πολύ καιρό ήταν και για μένα
+ένα σοβαρό πρόβλημα το οποίο βέβαια λύνεται σχετικά εύκολα με Dual Boot.</p>
+
+<p>Ωστόσο εδώ θα προτιμήσω να αναλύσω την παρουσία παιχνιδιών σε Linux η οποία αν
+και ακόμη δεν είναι σε ικανοποιητικά επίπεδα, μετά την επίσημη υποστήριξη του
+Steam για Linux, η ζυγαριά έχει σταματήσει να γέρνει αποκλειστικά στα Windows.</p>
+
+<p>Προσωπικά, όπως μπορείτε να δείτε και στην παρακάτω εικόνα, από τα 481 παιχνίδια
+που έχω σύνολο, τα 95 είναι συμβατά με Linux, το 20% περίπου δηλαδή, ένα δείγμα
+που θεωρώ αρκετά αντιπροσωπευτικό.</p>
+
+<p>Βέβαια υπάρχουν και διάφορα εργαλεία όπως το Wine που από παλιά χρησιμοποιούν
+επιτυχώς οι πιο «ψαγμένοι» χρήστες για να παίξουν παιχνίδια στο Linux.</p>
+
+<h1 id="τι-είναι-αυτό-το-dual-boot-που-ανέφερες">Τι είναι αυτό το Dual Boot που ανέφερες;</h1>
+
+<p>Υπάρχει η δυνατότητα στην συντριπτική πλειοψηφία των υπολογιστών σήμερα, να
+εγκαταστήσετε 2 λειτουργικά (Windows και Ubuntu για παράδειγμα) και κάθε φορά
+όταν ανοίγετε τον υπολογιστή, να επιλέγετε ποιο λειτουργικό θα χρησιμοποιήσετε.
+Αυτό υλοποιείται κυρίως από Gamers και άτομα που έχουν Windows εφαρμογές που
+ακόμη δεν έχουν έρθει στο Linux.</p>
+
+<p>Έτσι μπορείς να παίζεις Call of Duty (μπλιαξ) σε Windows, και να εργάζεσαι στο
+Linux κοκ.</p>
+
+<h1 id="πηγές">Πηγές</h1>
+
+<ul>
+  <li>
+    <p>http://en.wikipedia.org/wiki/Linux</p>
+  </li>
+  <li>
+    <p>http://en.wikipedia.org/wiki/Operating_system</p>
+  </li>
+  <li>
+    <p>http://en.wikipedia.org/wiki/Usage_share_of_operating_systems</p>
+  </li>
+  <li>
+    <p>http://en.wikipedia.org/wiki/Linux_distribution</p>
+  </li>
+  <li>
+    <p>http://futurist.se/gldt/</p>
+  </li>
+  <li>
+    <p>http://en.wikipedia.org/wiki/Package_manager</p>
+  </li>
+  <li>
+    <p>http://www.linux.gr/page/distros</p>
+  </li>
+  <li>
+    <p>http://xubuntu.org/</p>
+  </li>
+  <li>
+    <p>http://www.ubuntu.com/</p>
+  </li>
+  <li>
+    <p>https://unity.ubuntu.com/</p>
+  </li>
+  <li>
+    <p>http://ubuntu-gr.org/</p>
+  </li>
+</ul>
+
+				</p>
+			</div>
+			<a class="u-url" href="/el/post/2014/12/14/to-linux-se-apla-ellinika.html" hidden></a>
+		</article>
+	</div>
+</div></div><footer class="bg-gradient-papaya text-center text-dark p-3">
+<!--
+	<section class="">
+		<form action="">
+			<div class="row d-flex justify-content-center">
+				<div class="col-auto">
+					<p class="pt-2">
+						<strong>Sign up for our newsletter</strong>
+					</p>
+				</div>
+				<div class="col-md-5 col-12">
+					<div class="form-outline form-white mb-4">
+						<input type="email" id="form5Example2" class="form-control" />
+						<label class="form-label" for="form5Example2">Email address</label>
+					</div>
+				</div>
+				<div class="col-auto">
+					<button type="submit" class="btn btn-outline-light mb-4">
+						Subscribe
+					</button>
+				</div>
+			</div>
+		</form>
+	</section>
+-->
+	
+<!--
+	<section class="">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+					<li>
+						<a href="#!" class="text-white">Link 1</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 2</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 3</a>
+					</li>
+					<li>
+						<a href="#!" class="text-white">Link 4</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+-->
+	<div class="d-flex flex-column flex-lg-row justify-content-between">
+    <div class="text-center text-lg-start">
+        <a
+            class="btn btn-outline-dark btn-floating m-1"href="/el/feed.xml"
+            
+            role="button"
+            title="Subscribe via RSS"
+        >
+            <i class="fas fa-rss"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://twitter.com/johnprantalos"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.linkedin.com/in/johnprantalos/"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://github.com/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-github"></i>
+        </a>
+        <a
+            class="btn btn-outline-dark btn-floating m-1"
+            href="https://www.behance.net/pandor1an"
+            role="button"
+            target="_blank"
+        >
+            <i class="fab fa-behance"></i>
+        </a>
+    </div>
+    <div class="d-flex flex-row justify-content-center my-2 my-lg-0">
+        <!-- <div><script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+<script type='text/javascript'>
+	kofiwidget2.init('Κέρνα ένα Κό-φι', '#29abe0', 'T6T33YC8F');
+	kofiwidget2.draw();
+</script> </div> -->
+        <div><div class="btn-group ms-3 d-block">
+	<button type="button" class="btn btn-light dropdown-toggle pe-4" data-bs-toggle="dropdown" aria-expanded="false">
+		<img src="/assets/el.svg">
+	</button>
+	<ul class="dropdown-menu"><li>
+				<a class="dropdown-item " href="https://legacy.prantalos.com/">
+					<!-- English -->
+					English
+				</a>
+			</li><li>
+				<a class="dropdown-item bg-primary text-light" href="https://legacy.prantalos.com/el">
+					<!-- Ελληνικά -->
+					Ελληνικά
+				</a>
+			</li></ul>
+</div></div>
+    </div>
+</div>
+	<div class="text-center mt-3 px-3 pb-1">
+		&copy; 2009 - 2021 John "Pandor1an" Prantalos
+	</div>
+</footer>
+</main>
+			</div>
+		</div>
+	</div><script src='/assets/main.js'></script>
+	<script>
+		(function(d){
+		var s = d.createElement("script");
+		s.setAttribute("data-language", "el");
+		s.setAttribute("data-account", "");
+		s.setAttribute("src", "https://cdn.userway.org/widget.js");
+		(d.body || d.head).appendChild(s);})(document)
+	</script>
+</body>
+</html>
